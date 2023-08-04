@@ -48,10 +48,15 @@ h1 {
   margin: 5% 3% 5% 0;
 }
 
-#iphone6{
-  width: 60%;
-  transform:rotate(25deg);
-  /* margin-left: 60px; */
+#iphone6 {
+  width: 25%;
+  transform: rotate(25deg);
+  position: absolute;
+  z-index: 1;
+}
+
+.title-block{
+  padding-bottom: 60px;
 }
 
 .boxy{
@@ -121,15 +126,12 @@ em{
   font-weight: bold;
 }
 
-#features{
+#features {
   position: relative;
-  z-index: 1;
+  z-index: 2; /* Update the z-index to be higher than the "iphone6" image */
+  background-color: #fff;
+  padding: 80px;
 }
-.title-image{
-  position: relative;
-  z-index: -1;     
-}
-
 
 #press{
 text-align: center;
@@ -252,23 +254,18 @@ font-weight: 500;
 }
 
 
-/* Media query for phone-like screens */
+
 @media only screen and (max-width: 767px) {
-  .section {
-    /* New positioning and styles for phone-like screens */
-  }
+
 }
 
 /* Media query for tablets */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .section {
-    /* New positioning and styles for tablets */
+@media only screen and (min-width: 500px) and (max-width: 1023px) {
+  #iphone6{
+    position: static;
+    transform: rotate(0);
+  }
+  body{
+    text-align: center;
   }
 }
-
-/* Media query for other screens (desktop, larger screens) */
-@media only screen and (min-width: 1024px) {
-  .section {
-    /* New positioning and styles for other screens */
-  }
-} 

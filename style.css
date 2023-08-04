@@ -268,4 +268,9 @@ font-weight: 500;
   body{
     text-align: center;
   }
+  .nav-link{
+    color: #000;
+    font-weight: 700;
+  }
 }
+
